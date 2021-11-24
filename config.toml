@@ -1,0 +1,8 @@
+baseURL = '/'
+title = 'GBIJPPM Ministry'
+assetDir = "assets"
+timeZone = "Asia/Makassar"
+
+[params]
+    languageCode = 'id'
+    orgName = "GBI Pusat Perakitan"
