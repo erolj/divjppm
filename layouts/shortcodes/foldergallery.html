@@ -1,0 +1,12 @@
+<section class="gallery">
+    {{ $path := print "content/" .Page.Title "/" (.Get "src") }}
+    {{ $url  := print .Page.Permalink (.Get "src") }}
+    {{ range (readDir $path)  }}
+        {{ $src := print $url "/" .Name }}
+        <a data-fancybox="gallery" href="{{ $src }}">
+            <figure>
+                <img src="{{ $src }}">  <br/>            
+            </figure>
+        </a>
+    {{ end }}
+</section>

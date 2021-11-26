@@ -1,0 +1,8 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{ $favicon := resources.Get "img/Logo_GBI.png" }}
+<link rel="shortcut icon" href="{{ $favicon.Permalink }}" type="{{ $favicon.MediaType.Type }}">
+{{ $options := (dict "targetPath" "css/global.css" "outputStyle" "compressed" "enableSourceMap" false) }}
+{{ $style := resources.Get "scss/styles.scss" | toCSS $options | minify | fingerprint "sha512" }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
