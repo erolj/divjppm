@@ -1,1 +1,10 @@
-<p>© 2021 {{ .Site.Params.orgName }}</p>
+<p class="text-small">
+    © 2021 - <strong>{{ .Site.Params.orgName }}</strong>.<br />
+    Desain dan maintenance oleh:
+</p>
+<figure class="logo-multimedia">
+    {{ $multimedia := resources.Get "img/multimedia-g19403.png" }}
+    <a href="https://div.jppm.cc/multimedia" target="_blank" rel="noopener noreferrer">
+        <img src="{{ $multimedia.Permalink }}" alt="multimedia gbijppm">
+    </a>
+</figure>

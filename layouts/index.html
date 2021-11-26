@@ -1,3 +1,11 @@
 {{ define "main" }}
-<h1>Div GBI JPPM</h1>
+<div class="card">
+  <ul class="list-group list-group-flush">
+      {{ range where .Paginator.Pages ".Layout" "==" "default" }}
+      <li class="list-group-item position-relative">
+        <a class="stretched-link text-decoration-none" href="{{ .Permalink }}">{{ .Page.Params.name }}</a>
+      </li>
+      {{ end }}
+  </ul>
+</div>
 {{ end }}

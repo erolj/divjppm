@@ -1,3 +1,115 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$body-bg: whitesmoke;
+$body-color: #111;
+// $input-bg: white;
+// $breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E");
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+
+// 4. Include any optional Bootstrap CSS as needed
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/helpers";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/buttons";
+// @import "../../node_modules/bootstrap/scss/dropdown";
+// @import "../../node_modules/bootstrap/scss/breadcrumb";
+@import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/list-group";
+
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../../node_modules/bootstrap/scss/utilities/api";
+
+// 6. Add additional custom code here
+@font-face {
+    font-family: Outfit;
+    src: url("/webfonts/Outfit-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+}
+
+// html {
+//     color: whitesmoke;
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+// }
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Outfit, sans-serif;
+    // display: grid;
+    // place-items: center;
+    // resize: both;
+    // overflow: auto;
+    // height: 100%;
+}
+header {
+    background-image: linear-gradient(to right top, #031c70, #103191, #1747b3, #185fd6, #0f78fb);
+    min-height: 25vw;
+}
+footer {
+    background-color: navy;
+    color: white;
+}
+strong {
+    font-weight: 900;
+}
+.logo-header {
+    width: 10em;
+
+    img {
+        width: inherit;
+        animation: spin-logo 3s linear infinite;
+    }
+}
+.logo-multimedia {
+    img {
+        height: 1.725em;
+    }
+}
+.nama-gereja {
+    animation: spin-nama-gereja 3s linear infinite;
+}
+.text-small {
+    font-size: small;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+        flex-grow: 1;
+        object-fit: cover;
+        margin: 2px;
+        display: flex;
+
+        img {
+            height: 200px;
+            object-fit: cover;
+            flex-grow: 1;
+        }
+    }
+}
+
+
+@keyframes spin-logo {
+    0%   { transform: rotateY(   0deg ); }
+    40%  { transform: rotateY( 360deg ); }
+    100% { transform: rotateY( 360deg ); }
+}
+@keyframes spin-nama-gereja {
+    0%   { transform: rotateX(   0deg ); }
+    40%  { transform: rotateX( 360deg ); }
+    100% { transform: rotateX( 360deg ); }
 }
