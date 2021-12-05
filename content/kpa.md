@@ -6,7 +6,7 @@ avatar: "/img/logo-dpa-gbi.webp"
 icon: "/img/logo-dpa-gbi.webp"
 type: "page"
 layout: "default"
-imgbig: ""
+imgbig: "imgs/IMG_4350.JPG"
 imgsmall: ""
 draft: false
 ---
@@ -28,6 +28,7 @@ draft: false
 {{< bootstrap-table "table table-striped table-bordered mb-5" >}}
 | Nama Kategori | Persyaratan |
 |---|---|
+| Anak (Child) | Kelas 7 kebawah. |
 | Pelajar (Junior) | Masih bersekolah. Kelas 8 s.d. 12.
 | Mahasiswa (Youth) | Sementara kuliah. |
 | Professional (Dewasa Muda) | Sudah tidak sekolah, dan /atau bekerja. |

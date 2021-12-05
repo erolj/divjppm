@@ -5,8 +5,8 @@
     <title>{{ .Page.Params.name }} - {{ .Site.Title }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 </head>
-<body>
-    <header class="d-flex flex-column justify-content-center">
+<body class="page">
+    <header class="d-flex flex-column justify-content-center" style="background: linear-gradient(to right top, rgba(0 0 0 / 90%),rgba(0 0 0 / 60%)), center / cover no-repeat fixed url('{{ .Page.Params.imgbig }}');">
         <div class="container d-flex justify-content-center text-center">
             <figure class="avatar">
                 {{ $image := resources.Get .Page.Params.avatar }}

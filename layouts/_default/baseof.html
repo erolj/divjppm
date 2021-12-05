@@ -4,8 +4,9 @@
     {{ partial "headtag" . }}
     <title>{{ .Title }}</title>
 </head>
-<body>
-    <header class="d-flex flex-column justify-content-center">
+<body class="home">
+    {{ $bghome := resources.Get "/img/bg-home.jpeg" }}
+    <header class="d-flex flex-column justify-content-center" style="background: linear-gradient(to right top, rgba(0 0 0 / 90%),rgba(0 0 0 / 60%)), center / cover no-repeat fixed url('{{ $bghome.Permalink }}');">
         <div class="container d-flex justify-content-center">
             <figure class="logo-header">
                 {{ $logo := resources.Get "img/Logo_GBI.png" }}

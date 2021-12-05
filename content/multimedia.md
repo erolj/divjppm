@@ -6,7 +6,7 @@ avatar: "/img/multimedia-rect-light.png"
 icon: "/img/multimedia-rect-gold.png"
 type: "page"
 layout: "default"
-imgbig: ""
+imgbig: "imgs/244613559_10220643907870877_974805886956412142_n.jpg"
 imgsmall: ""
 draft: false
 ---
@@ -29,6 +29,7 @@ draft: false
 | Photographer | Menyediakan stock photo yang dibutuhkan Clan Designer. |
 | Videographer | Menyediakan stock video yang dibutuhkan Clan Designer. |
 | IT | Tanggung jawab peralatan, infrastruktur onsite/online. |
+| Developer | Mengembangkan dan merawat semua aplikasi (*web app/android app*) gereja. |
 {{< /bootstrap-table >}}
 
 ## Squad Ibadah Raya
