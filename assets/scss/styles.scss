@@ -84,6 +84,19 @@ strong {
 .text-small {
     font-size: small;
 }
+.avatar {
+    img {
+        height: 6em;
+    }
+}
+.card-title-home {
+    font-size: 1rem;
+}
+.card-body {
+    img {
+        height: 5em;
+    }
+}
 .gallery {
     display: flex;
     flex-wrap: wrap;
