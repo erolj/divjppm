@@ -8,6 +8,12 @@
 <body>
     <header class="d-flex flex-column justify-content-center">
         <div class="container d-flex justify-content-center text-center">
+            <figure class="avatar">
+                {{ $image := resources.Get .Page.Params.avatar }}
+                <img src="{{ $image.Permalink }}" alt="">
+            </figure>
+        </div>
+        <div class="container d-flex justify-content-center text-center">
             <h1 class="text-light">{{ .Page.Params.name }}</h1>
         </div>
     </header>

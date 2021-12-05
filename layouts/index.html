@@ -1,11 +1,19 @@
 {{ define "main" }}
-<div class="card">
-  <ul class="list-group list-group-flush">
-      {{ range where .Paginator.Pages ".Layout" "==" "default" }}
-      <li class="list-group-item position-relative">
-        <a class="stretched-link text-decoration-none" href="{{ .Permalink }}">{{ .Page.Params.name }}</a>
-      </li>
-      {{ end }}
-  </ul>
+<div class="row justify-content-center">
+  {{ range where .Paginator.Pages ".Layout" "==" "default" }}
+  <div class="col-md-3 col-sm-12 mb-4">
+    <div class="card text-center shadow-sm">
+      <div class="card-body">
+        <figure class="card-icon">
+          {{ $icon := resources.Get .Params.icon }}
+          <img src="{{ $icon.Permalink }}" alt="Icon {{ .Params.name }}">
+        </figure>
+        <a href="{{ .Permalink }}" class="stretched-link text-decoration-none">
+          <h2 class="card-title card-title-home">{{ .Params.name }}</h2>
+        </a>
+      </div>
+    </div>
+  </div>
+  {{ end }}
 </div>
 {{ end }}
